@@ -1,0 +1,30 @@
+# COMMON APPLICATION PROPERTIES
+
+# start services on random port by default
+server.port: 0
+
+# JPA
+spring.jpa.hibernate.ddl-auto: none
+
+# Temporary hack required by the Spring Boot 2 / Spring Cloud Finchley branch
+# Waiting issue https://github.com/spring-projects/spring-boot/issues/13042
+spring.cloud.refresh.refreshable: false
+
+# Logging
+logging.level.org.springframework: INFO
+
+# Metrics
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
