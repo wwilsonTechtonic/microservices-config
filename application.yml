@@ -1,7 +1,5 @@
 # COMMON APPLICATION PROPERTIES
 
-# start services on random port by default
-server.port: 0
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
